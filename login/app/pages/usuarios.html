@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG Store</title>
+    <link rel="stylesheet" href="usuarios.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>MG Store</h1>
+        <div id="carritoContainer">
+            <img class="carrito" src="img/687259.png" alt="Carrito de compras" id="carrito">
+            <div id="numeroProductos">0</div>
+        </div>
+        <div class="navegacion">
+            <nav>
+                <ul>
+                    <button id="cerrarSesion">Cerrar Sesion</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="contenedor" id="contenedorProductos"></div>
+    <main id="main">
+        <div id="contenedorCompra" class="none">
+            <div id="informacionCompra" class="informacionCompra">
+                <h2>Carrito</h2>
+                <p class="x" id="cerrarCarrito">X</p>
+            </div>
+            <div id="productosCompra" class="productosCompra"></div>
+            <div id="totalCompra" class="totalCompra">
+                <span>Total:</span><span id="totalPrecio">$0.00</span>
+            </div>
+            <button type="button" id="comprar">Comprar</button
+        </div>
+    </main>
+    <script src="usuarios.js"></script>
+</body>
+
+</html>

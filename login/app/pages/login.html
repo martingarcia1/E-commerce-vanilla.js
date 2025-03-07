@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <div class="formulario-contedor">
+            <h1>Iniciar Sesion</h1>
+            <section>
+                <form action="" id="formulario-login">
+
+                    <label class="sr-only">Nombre de Usuario</label>
+                    <input type="text" placeholder="Ingrese su nombre de usuario" id="nombreUsuario" required></input>
+
+                    <label class="sr-only">Contraseña</label>
+                    <input type="password" placeholder="Ingrese su contraseña" id="contraseña" required></input>
+
+                    <span>
+                        <button  type="submit">Iniciar Sesion</button> <br>
+                        <p class="error escondido">Error al Registro</p>
+                    </span>
+                    <p>No tienes cuenta?</p> <button><a href="/register">Registrate</a></button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="login.js" defer></script>
+</body>
+
+</html>

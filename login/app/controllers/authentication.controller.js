@@ -7,17 +7,17 @@ export const usuarios = [
   {
     //contraseña: "$2a$05$nLY2It8riku2vwwDIINdgO/XIyPXRg1Gn9LFgnhwKqC4TwcAwEUL2", // Contraseña encriptada
     nombreUsuario: "admin",
-    contraseña: "$2a$10$U60GgDS137kA2vm5CQfIMOGnjEnwegPHAEbRSKlyZjOQoyKJdL/ke",
+    contraseña: "$2a$10$U60GgDS137kA2vm5CQfIMOGnjEnwegPHAEbRSKlyZjOQoyKJdL/ke", // Contraseña encriptada, admin123
     role: "admin"
   },
   {
     nombreUsuario: "usuario",
-    contraseña: "$2a$05$QuWjxMKHKN4gjQCIksDCR.VNL.5xp.3YlO4kHGYkTwmA2AsfPvl46", // Contraseña encriptada
+    contraseña: "$2a$10$3ZGM71hFjHLbZ578Rfuhs.TFlAYpYXacAAs5c3bIxHcxlLSKQhAAy", // Contraseña encriptada, usuario123
     role: "usuario"
   },
   {
     nombreUsuario: "usuarios",
-    contraseña: "$2a$05$d8RsCr0OAQkYssdB4I20WuLFM9LXbS.zmMYSJaojGadKuWohBN9se", // Contraseña encriptada
+    contraseña: "$2a$10$ATLRS6B15qNN91g29TixzuewklpA0QK880P7abSealuj84VcJcYSe", // Contraseña encriptada, usuarios123
     role: "usuario"
   }
 ];
@@ -80,7 +80,7 @@ export async function register(req, res) {
 }
 // Cerrar Sesion
 export async function logout(req, res) {
-  
+
   res.clearCookie("jwt", { path: "/" });
   return res.status(200).send({ status: "ok", message: "Sesión cerrada", redirect: "/" });
 }

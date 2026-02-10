@@ -5,8 +5,9 @@ dotenv.config();
 
 export const usuarios = [
   {
+    //contraseña: "$2a$05$nLY2It8riku2vwwDIINdgO/XIyPXRg1Gn9LFgnhwKqC4TwcAwEUL2", // Contraseña encriptada
     nombreUsuario: "admin",
-    contraseña: "$2a$05$nLY2It8riku2vwwDIINdgO/XIyPXRg1Gn9LFgnhwKqC4TwcAwEUL2", // Contraseña encriptada
+    contraseña: "$2a$10$U60GgDS137kA2vm5CQfIMOGnjEnwegPHAEbRSKlyZjOQoyKJdL/ke",
     role: "admin"
   },
   {

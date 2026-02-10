@@ -239,7 +239,7 @@ document.getElementById('comprar').addEventListener('click', final);
 document.getElementById("cerrarSesion").addEventListener("click", async () => {
     console.log('Intentando cerrar sesión...');
     try {
-        const res = await fetch("http://localhost:3000/api/logout", {
+        const res = await fetch("/api/logout", {
             method: "POST",
             credentials: "include"
         });

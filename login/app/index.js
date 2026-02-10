@@ -19,7 +19,15 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: (origin, callback) => {
+        // En desarrollo permitimos localhost, en producción permitimos el dominio de Vercel (o todos si prefieres)
+        // Para simplificar, permitiremos cualquier origen o null (para pruebas locales)
+        if (!origin || origin.startsWith('http://localhost') || origin.includes('vercel.app')) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true
 }));
 

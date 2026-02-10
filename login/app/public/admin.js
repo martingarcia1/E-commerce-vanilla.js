@@ -8,7 +8,7 @@ function mostrarOpciones(tipoUsuario) {
 }
 
 
-const tipoUsuario = localStorage.getItem('rolUsuario'); 
+const tipoUsuario = localStorage.getItem('rolUsuario');
 mostrarOpciones(tipoUsuario);
 
 
@@ -26,9 +26,9 @@ function irAPaginaPrincipalUsuario() {
 });*/
 document.getElementsByTagName("button")[0].addEventListener("click", async () => {
     try {
-        const res = await fetch("http://localhost:3000/api/logout", {
+        const res = await fetch("/api/logout", {
             method: "POST",
-            credentials: "include" 
+            credentials: "include"
         });
 
         if (res.ok) {

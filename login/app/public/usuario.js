@@ -237,9 +237,9 @@ document.getElementById('comprar').addEventListener('click', final);
 document.getElementById("cerrarSesion").addEventListener("click", async () => {
     console.log('Intentando cerrar sesión...');
     try {
-        const res = await fetch("http://localhost:3000/api/logout", {
+        const res = await fetch("/api/logout", {
             method: "POST",
-            credentials: "include" 
+            credentials: "include"
         });
         if (res.ok) {
             const resJson = await res.json();
@@ -259,7 +259,7 @@ document.getElementById("cerrarSesion").addEventListener("click", async () => {
 window.addEventListener("DOMContentLoaded", () => {
     const productoEd = document.getElementById('productoEditar');
     const productoEl = document.getElementById('productoEliminar');
-    const atributoEd = document.getElementById('atributoEditar'); 
+    const atributoEd = document.getElementById('atributoEditar');
 
     if (productoEd && productoEl && atributoEd) {
         productos.forEach(producto => {
@@ -274,8 +274,8 @@ window.addEventListener("DOMContentLoaded", () => {
             productoEl.appendChild(option2);
         });
 
-        
-        const atributos = ['existencia', 'valor', 'urlImagen']; 
+
+        const atributos = ['existencia', 'valor', 'urlImagen'];
         atributos.forEach(atributo => {
             const option = document.createElement('option');
             option.value = atributo;

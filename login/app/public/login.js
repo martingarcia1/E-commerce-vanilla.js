@@ -4,7 +4,7 @@ document.getElementById("formulario-login").addEventListener("submit", async (e)
   const nombreUsuario = e.target.children.nombreUsuario.value;
   const contraseña = e.target.children.contraseña.value;
   try {
-    const res = await fetch("http://localhost:3000/api/login", {
+    const res = await fetch("/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
